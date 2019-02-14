@@ -26,8 +26,6 @@ section
     flex-direction: column
     justify-content: flex-start
 
-    h2
-
     q
 
       &::before
@@ -111,3 +109,31 @@ section
       &:hover
         background: $secondary-color
         color: black
+
+// About
+
+#about
+  height: auto
+  padding-bottom: 6em
+
+  q
+    max-width: 95%
+
+  a
+    align-self: flex-end
+    margin-bottom: 3em
+    margin-right: 2em
+
+    border: 0.1em solid $secondary-color
+    padding: 10px 18px
+    color: $secondary-color
+    text-transform: uppercase
+    text-decoration: none
+    font-family: $font-secondary
+    font-weight: 700
+    letter-spacing: 0.1em
+    transition: 300ms
+
+    &:hover
+      background: $secondary-color
+      color: black

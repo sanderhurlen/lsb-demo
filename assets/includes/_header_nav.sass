@@ -1,16 +1,23 @@
+#logo
+  display: block
+  background: url("../imgs/lille_strøm_bar.png") no-repeat
+  background-size: contain
+  height: 114px
+  width: 80px
+  transition: 100ms
+
+  &:hover
+    transform: scale(1.1)
+
 nav
   background: $nav-color
   height: 60px
   display: flex
   align-items: center
+  margin: 0 6em
 
   #logo
-    display: block
-    background: url("../imgs/lille_strøm_bar.png") no-repeat
-    background-size: contain
-    height: 140px
-    width: 80px
-    margin: 10px auto auto 20px
+    margin: 1em auto auto 0
 
   .menu-a
     color: $primary-color
@@ -19,6 +26,9 @@ nav
     font-weight: 300
     text-transform: uppercase
     text-decoration: none
+
+    &:hover
+      text-decoration: underline
 
   a:last-child
     margin-right: 20px

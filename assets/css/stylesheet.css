@@ -5,6 +5,20 @@ body {
   background: black;
   font-family: "Playfair Display", serif; }
 
+#logo {
+  display: block;
+  background: url("../imgs/lille_strøm_bar.png") no-repeat;
+  background-size: contain;
+  height: 114px;
+  width: 80px;
+  -webkit-transition: 100ms;
+  -o-transition: 100ms;
+  transition: 100ms; }
+  #logo:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+
 nav {
   background: black;
   height: 60px;
@@ -13,14 +27,10 @@ nav {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin: 0 6em; }
   nav #logo {
-    display: block;
-    background: url("../imgs/lille_strøm_bar.png") no-repeat;
-    background-size: contain;
-    height: 140px;
-    width: 80px;
-    margin: 10px auto auto 20px; }
+    margin: 1em auto auto 0; }
   nav .menu-a {
     color: white;
     margin: 0 9px;
@@ -28,6 +38,8 @@ nav {
     font-weight: 300;
     text-transform: uppercase;
     text-decoration: none; }
+    nav .menu-a:hover {
+      text-decoration: underline; }
   nav a:last-child {
     margin-right: 20px; }
 
@@ -166,3 +178,52 @@ section {
     #map .text-container a:hover {
       background: #B35F00;
       color: black; }
+
+#about {
+  height: auto;
+  padding-bottom: 6em; }
+  #about q {
+    max-width: 95%; }
+  #about a {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin-bottom: 3em;
+    margin-right: 2em;
+    border: 0.1em solid #B35F00;
+    padding: 10px 18px;
+    color: #B35F00;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    -webkit-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms; }
+    #about a:hover {
+      background: #B35F00;
+      color: black; }
+
+footer {
+  background: #B35F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 6em; }
+  footer ul {
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    list-style: none; }
+    footer ul li {
+      padding: 0.3em 0; }
+      footer ul li a {
+        color: black;
+        text-decoration: none; }
+        footer ul li a:hover {
+          text-decoration: underline; }
+  footer p {
+    display: block; }
