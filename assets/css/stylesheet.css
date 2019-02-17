@@ -66,6 +66,10 @@ q {
   font-size: 2.3em;
   margin-left: 1.2em;
   position: relative; }
+  @media (max-width: 767px) {
+    q {
+      max-width: 100%;
+      font-size: 1.7em; } }
 
 section {
   display: -webkit-box;
@@ -77,6 +81,17 @@ section {
   -ms-flex-align: center;
   align-items: center;
   height: 500px; }
+  @media (max-width: 767px) {
+    section {
+      width: 100%;
+      height: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   section .text-container {
     width: 40%;
     height: 70%;
@@ -90,9 +105,14 @@ section {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start; }
+    @media (max-width: 767px) {
+      section .text-container {
+        margin: 1em 0 3em 0;
+        height: 100%;
+        width: 90%; } }
     section .text-container q::before {
       position: absolute;
-      content: open-quote;
+      content: "\201C";
       font-size: 4em;
       font-weight: 400;
       top: -0.6em;
@@ -109,6 +129,9 @@ section {
     -ms-grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 1.3em; }
+    @media (max-width: 767px) {
+      section .action-container {
+        margin-bottom: 2em; } }
     section .action-container div, section .action-container a {
       border: 0.1em solid #B35F00; }
     section .action-container div {
@@ -142,8 +165,16 @@ section {
         font-weight: 700;
         letter-spacing: 0.1em; }
 
+@media (max-width: 767px) {
+  #map .map-container {
+    width: 90%; } }
+
 #map .map-container .mapouter {
   margin-left: 2em; }
+  @media (max-width: 767px) {
+    #map .map-container .mapouter {
+      margin: 0 auto;
+      margin-bottom: 3em; } }
 
 #map .text-container {
   display: -webkit-box;
@@ -163,7 +194,6 @@ section {
     -ms-flex-item-align: end;
     align-self: flex-end;
     margin-top: 3em;
-    margin-right: 3em;
     border: 0.1em solid #B35F00;
     padding: 10px 18px;
     color: #B35F00;
@@ -175,6 +205,9 @@ section {
     -webkit-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms; }
+    @media (max-width: 767px) {
+      #map .text-container a {
+        margin-right: 0.5em; } }
     #map .text-container a:hover {
       background: #B35F00;
       color: black; }
@@ -188,7 +221,6 @@ section {
     -ms-flex-item-align: end;
     align-self: flex-end;
     margin-bottom: 3em;
-    margin-right: 2em;
     border: 0.1em solid #B35F00;
     padding: 10px 18px;
     color: #B35F00;
@@ -200,9 +232,27 @@ section {
     -webkit-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms; }
+    #about a::before {
+      content: ""; }
     #about a:hover {
       background: #B35F00;
       color: black; }
+  #about .a-container {
+    width: 370px;
+    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    @media (max-width: 767px) {
+      #about .a-container {
+        height: 80px;
+        width: 90%; } }
+    @media (max-width: 767px) {
+      #about .a-container a {
+        margin-right: 0.5em; } }
 
 footer {
   background: #B35F00;

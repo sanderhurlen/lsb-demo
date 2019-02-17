@@ -13,11 +13,21 @@ q
   margin-left: 1.2em
   position: relative
 
+  @include mobile
+    max-width: 100%
+    font-size: 1.7em
+
 section
   display: flex
   justify-content: space-around
   align-items: center
   height: 500px
+
+  @include mobile
+    width: 100%
+    height: 100%
+    flex-direction: column
+    justify-content: center
 
   .text-container
     width: 40%
@@ -26,11 +36,16 @@ section
     flex-direction: column
     justify-content: flex-start
 
+    @include mobile
+      margin: 1em 0 3em 0
+      height: 100%
+      width: 90%
+
     q
 
       &::before
         position: absolute
-        content: open-quote
+        content: "\201C"
         font-size: 4em
         font-weight: 400
         top: -0.6em
@@ -46,6 +61,9 @@ section
     grid-template-columns: 1fr 1fr
     grid-template-rows: 1fr 1fr
     grid-gap: 1.3em
+
+    @include mobile
+      margin-bottom: 2em
 
     div, a
       border: 0.1em solid $secondary-color
@@ -81,9 +99,17 @@ section
 
 // MAP
 #map
+
   .map-container
+    @include mobile
+      width: 90%
+
     .mapouter
       margin-left: 2em
+
+      @include mobile
+        margin: 0 auto
+        margin-bottom: 3em
 
   .text-container
     display: flex
@@ -94,7 +120,6 @@ section
     a
       align-self: flex-end
       margin-top: 3em
-      margin-right: 3em
 
       border: 0.1em solid $secondary-color
       padding: 10px 18px
@@ -105,6 +130,9 @@ section
       font-weight: 700
       letter-spacing: 0.1em
       transition: 300ms
+
+      @include mobile
+        margin-right: 0.5em
 
       &:hover
         background: $secondary-color
@@ -122,7 +150,6 @@ section
   a
     align-self: flex-end
     margin-bottom: 3em
-    margin-right: 2em
 
     border: 0.1em solid $secondary-color
     padding: 10px 18px
@@ -134,6 +161,24 @@ section
     letter-spacing: 0.1em
     transition: 300ms
 
+    &::before
+      content: ""
+
     &:hover
       background: $secondary-color
       color: black
+
+  .a-container
+    width: 370px
+    height: 300px
+    display: flex
+    justify-content: flex-end
+
+    @include mobile
+      height: 80px
+      width: 90%
+
+    a
+
+      @include mobile
+        margin-right: 0.5em
