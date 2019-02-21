@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
-  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0;
   background: black;
   font-family: "Playfair Display", serif; }
@@ -22,18 +23,22 @@ body {
 nav {
   background: black;
   height: 60px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 6em; }
-  @media (max-width: 767px) {
-    nav {
-      margin: 0 1em; } }
+  margin: 0; }
   nav #logo {
-    margin: 1em auto auto 0; }
+    margin: 1em auto auto 7em; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      nav #logo {
+        margin-left: 3em; } }
+    @media (max-width: 767px) {
+      nav #logo {
+        margin-left: 1em; } }
   nav .menu-a {
     color: white;
     margin: 0 9px;
@@ -44,7 +49,13 @@ nav {
     nav .menu-a:hover {
       text-decoration: underline; }
   nav a:last-child {
-    margin-right: 20px; }
+    margin-right: 6em; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      nav a:last-child {
+        margin-right: 3em; } }
+  @media (max-width: 767px) {
+    nav a:nth-child(4) {
+      margin-right: 2em; } }
 
 @media (max-width: 767px) {
   .hide {

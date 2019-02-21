@@ -12,15 +12,19 @@
 nav
   background: $nav-color
   height: 60px
+  width: 100%
   display: flex
   align-items: center
-  margin: 0 6em
-
-  @include mobile
-    margin: 0 1em
+  margin: 0
 
   #logo
-    margin: 1em auto auto 0
+    margin: 1em auto auto 7em
+
+    @include tablet
+      margin-left: 3em
+
+    @include mobile
+      margin-left: 1em
 
   .menu-a
     color: $primary-color
@@ -34,7 +38,14 @@ nav
       text-decoration: underline
 
   a:last-child
-    margin-right: 20px
+    margin-right: 6em
+
+    @include tablet
+      margin-right: 3em
+
+  a:nth-child(4)
+    @include mobile
+      margin-right: 2em
 
 @include mobile
   .hide
