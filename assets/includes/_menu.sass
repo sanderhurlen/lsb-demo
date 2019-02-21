@@ -1,0 +1,48 @@
+.menu-introduction
+  margin-bottom: 5em
+
+  &::after
+    margin-bottom: 1em
+
+.menu-container
+  display: grid
+  justify-content: center
+  grid-template-columns: repeat(4, 250px)
+  grid-template-rows: repeat(3, 250px)
+  grid-gap: 20px 20px
+
+  @media (max-width: 1100px)
+    grid-template-columns: repeat(3, 240px)
+    grid-template-rows: repeat(4, 240px)
+    grid-gap: 1em
+
+  @include mobile
+    grid-template-columns: repeat(2, 195px)
+    grid-template-rows: repeat(5, 195px)
+    grid-gap: 1em
+
+  .menu-item
+    overflow: hidden
+    transition: 320ms
+    position: relative
+
+    @include desktop
+      &:hover
+        transform: scale(1.03)
+        overflow: hidden
+
+        h3
+          background: $secondary-color
+          color: black
+
+    img
+      width: 100%
+
+    h3
+      background: black
+      color: $secondary-color
+      position: absolute
+      bottom: 0
+      left: 10px
+      padding: 2px 8px
+      transition: 500ms

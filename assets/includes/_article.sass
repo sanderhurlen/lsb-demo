@@ -1,0 +1,43 @@
+header
+  background: black
+  height: 10em
+
+section
+  margin: 0 7em
+
+  @include tablet
+    margin: 0 1em
+
+  @include mobile
+    margin: 0 1em
+    margin-bottom: 2em
+
+  @include desktop
+    &::after
+      content: ""
+      display: block
+      margin-bottom: 50%
+
+h1
+  color: white
+  font-size: 4em
+
+.index
+  font-size: 1.3em
+  font-weight: bold
+
+p
+  color: white
+
+.mapouter
+  margin: 5em 0
+
+  @include mobile
+    margin: 5em auto
+
+ul
+  color: white
+  li
+
+a
+  color: $secondary-color

@@ -1,0 +1,203 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: "Playfair Display", serif; }
+
+#logo {
+  display: block;
+  background: url("../imgs/lille_strøm_bar.png") no-repeat;
+  background-size: contain;
+  height: 114px;
+  width: 80px;
+  -webkit-transition: 100ms;
+  -o-transition: 100ms;
+  transition: 100ms; }
+  #logo:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+
+nav {
+  background: black;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 6em; }
+  @media (max-width: 767px) {
+    nav {
+      margin: 0 1em; } }
+  nav #logo {
+    margin: 1em auto auto 0; }
+  nav .menu-a {
+    color: white;
+    margin: 0 9px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none; }
+    nav .menu-a:hover {
+      text-decoration: underline; }
+  nav a:last-child {
+    margin-right: 20px; }
+
+@media (max-width: 767px) {
+  .hide {
+    visibility: hidden !important;
+    display: none; } }
+
+header {
+  width: 100%;
+  height: 700px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(black)), url("../imgs/header-bcg.png") no-repeat;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), black), url("../imgs/header-bcg.png") no-repeat;
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0), black), url("../imgs/header-bcg.png") no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), black), url("../imgs/header-bcg.png") no-repeat;
+  background-size: cover;
+  background-origin: border-box;
+  background-position: 50% 60%; }
+  @media (max-width: 767px) {
+    header {
+      background-position: 20% 50%; } }
+
+header {
+  background: black;
+  height: 10em; }
+
+section {
+  margin: 0 7em; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    section {
+      margin: 0 1em; } }
+  @media (max-width: 767px) {
+    section {
+      margin: 0 1em;
+      margin-bottom: 2em; } }
+  @media (min-width: 992px) {
+    section::after {
+      content: "";
+      display: block;
+      margin-bottom: 50%; } }
+
+h1 {
+  color: white;
+  font-size: 4em; }
+
+.index {
+  font-size: 1.3em;
+  font-weight: bold; }
+
+p {
+  color: white; }
+
+.mapouter {
+  margin: 5em 0; }
+  @media (max-width: 767px) {
+    .mapouter {
+      margin: 5em auto; } }
+
+ul {
+  color: white; }
+
+a {
+  color: #B35F00; }
+
+.menu-introduction {
+  margin-bottom: 5em; }
+  .menu-introduction::after {
+    margin-bottom: 1em; }
+
+.menu-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-grid-columns: (250px)[4];
+  grid-template-columns: repeat(4, 250px);
+  -ms-grid-rows: (250px)[3];
+  grid-template-rows: repeat(3, 250px);
+  grid-gap: 20px 20px; }
+  @media (max-width: 1100px) {
+    .menu-container {
+      -ms-grid-columns: (240px)[3];
+      grid-template-columns: repeat(3, 240px);
+      -ms-grid-rows: (240px)[4];
+      grid-template-rows: repeat(4, 240px);
+      grid-gap: 1em; } }
+  @media (max-width: 767px) {
+    .menu-container {
+      -ms-grid-columns: (195px)[2];
+      grid-template-columns: repeat(2, 195px);
+      -ms-grid-rows: (195px)[5];
+      grid-template-rows: repeat(5, 195px);
+      grid-gap: 1em; } }
+  .menu-container .menu-item {
+    overflow: hidden;
+    -webkit-transition: 320ms;
+    -o-transition: 320ms;
+    transition: 320ms;
+    position: relative; }
+    @media (min-width: 992px) {
+      .menu-container .menu-item:hover {
+        -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        transform: scale(1.03);
+        overflow: hidden; }
+        .menu-container .menu-item:hover h3 {
+          background: #B35F00;
+          color: black; } }
+    .menu-container .menu-item img {
+      width: 100%; }
+    .menu-container .menu-item h3 {
+      background: black;
+      color: #B35F00;
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      padding: 2px 8px;
+      -webkit-transition: 500ms;
+      -o-transition: 500ms;
+      transition: 500ms; }
+
+footer {
+  background: #B35F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 6em; }
+  @media (max-width: 767px) {
+    footer {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      padding: 0 1em; } }
+  footer ul {
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    list-style: none; }
+    footer ul li {
+      padding: 0.3em 0; }
+      footer ul li a {
+        color: black;
+        text-decoration: none; }
+        footer ul li a:hover {
+          text-decoration: underline; }
+  footer p {
+    display: block; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      footer p {
+        width: 15em; } }
+    @media (max-width: 767px) {
+      footer p {
+        width: 10em;
+        font-size: 0.8em; } }
