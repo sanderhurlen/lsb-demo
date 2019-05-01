@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../assets/css/master.css">
+  <title>JS skjema</title>
+</head>
+<body>
+  <div id="contactForm" class="contactForm">
+    <div id="formHeader" class="formHeader">
+      <a href="../index.html">Gå tilbake til webområde</a>
+      <h1 id="message">Skjema uten mening</h1>
+    </div>
+    <div id="formBody" class="formBody">
+      <form action="" method="POST" name="contactForm">
+        <article>
+          <p>Hvor kommer du fra?</p>
+          <select name="nationality" id="nationality">
+            <option value="norway">Norge</option>
+            <option value="sweden">Sverige</option>
+            <option value="danmark">Danmark</option>
+          </select>
+        </article>
+        <article class="gender">
+          <p>Er du mann eller kvinne?</p>
+          <label for="male">Mann</label>
+          <input type="radio" name="gender" id="male" value="male">
+          <label for="female">Kvinne</label>
+          <input type="radio" name="gender" id="female" value="female">
+        </article>
+        <article>
+          <label for="favoriteWord">Ditt favorittord</label>
+          <input type="text" name="favoriteWord" id="favoriteWord">
+        </article>
+        <article>
+          <label for="name">Hva heter du?</label>
+          <input type="text" name="name" id="nameField" required>
+        </article>
+        <article>
+          <label for="numb">Tall fra 1 til 10</label>
+          <input type="number" name="numb" id="numb" required>
+        </article>
+        <input id="submitBtn" class="submitBtn" type="submit" value="Send">
+        <p id="demo" class="feedback_message"></p>
+      </form>
+      <script  src="form.js"></script>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+  font-family: "Helvetica neue", sans-serif;
+  background-color: honeydew; }
+
+h1 {
+  font-size: 3em;
+  display: flex;
+  justify-content: center; }
+
+.formBody {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .formBody article p {
+    font-weight: 600;
+    font-size: 1.5em; }
+  .formBody article {
+    margin: 30px 0; }
+  .formBody label {
+    font-size: 20px;
+    font-weight: 500; }
+
+.feedback_message {
+  font-size: 1em; }
+
+/*# sourceMappingURL=master.css.map */
